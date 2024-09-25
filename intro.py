@@ -3,10 +3,12 @@ import face_recognition
 import numpy as np
 from sys import argv
 import sys
+import cowsay
+import qrcode
 
 
 def main():
-    exit()
+    qr()
 
 
 def hello():
@@ -235,6 +237,15 @@ def exit():
         sys.exit(1)
     print(f"hello, {sys.argv[1]}")
     sys.exit(0)
+
+
+def moo():
+    cowsay.cow("Hello")
+
+
+def qr():
+    img = qrcode.make("https://cs50.harvard.edu/python/2022/")
+    img.save("qr.png", "PNG")
 
 
 if __name__ == "__main__":
